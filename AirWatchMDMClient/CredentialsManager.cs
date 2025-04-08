@@ -22,6 +22,17 @@ public class CredentialsManager
 
         
     }
+    /// <summary>
+    /// Get credentials via windows prompts
+    /// </summary>
+    /// <returns></returns>
+    public CredentialsManager(string username, string password)
+    {
+        this._username = username;
+        this._password = password;
+    }
+
+    
 public string GetAuthorizationHeader()
 {
    var credentials = $"{_username}:{_password}";
